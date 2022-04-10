@@ -8,7 +8,7 @@ public class Calculator {
     BinaryOperator<Integer> plus = (x, y) -> x + y;
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
-    BinaryOperator<Integer> devide = (x, y) -> isPositive.test(y) ? (x / y) : 0; /* В данном примере может возникнуть исключение
+    BinaryOperator<Integer> devide = (x, y) -> y == 0 ? 0 : x / y; /* В данном примере может возникнуть исключение
     ArithmeticException, если "y" будет равен 0; Поэтому предлагается выполнить проверку переменной "y" на равенство 0,
     и если это равенство истинно, то результатом деления будет принят 0.
     */
